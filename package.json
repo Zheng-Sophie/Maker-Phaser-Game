@@ -1,0 +1,59 @@
+{
+  "name": "my-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "antd": "^4.24.0",
+    "axios": "^0.27.2",
+    "babel-plugin-import": "^1.13.5",
+    "customize-cra": "^1.0.0",
+    "customize-cra-less-loader": "^2.0.0",
+    "fs": "^0.0.1-security",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "lodash.clonedeep": "^4.5.0",
+    "mkdirp": "^1.0.4",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^4.0.0",
+    "path": "^0.12.7",
+    "phaser": "^3.55.2",
+    "pubsub-js": "^1.9.4",
+    "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.3",
+    "react-scripts": "5.0.1",
+    "react-share": "^4.4.1",
+    "react-tooltip": "^5.11.1",
+    "react-custom-scrollbars": "^4.2.1",
+    "silly-datetime": "^0.1.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "set PORT=5051 && react-app-rewired --max-http-header-size=50000 start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+
+
+
+.fixed-game-footer{
+    bottom: 0;
+    left: 0;
+    padding: 8px 22.5px;
+    background-color: rgba(0, 0, 0, 0.664);
+
+    /* antd */
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    /* antd */
+}
+
+
+.modify-cards-screen{
+    left: 100%;
+    height: calc(100vh - 4rem); 
+    overflow-y: auto;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+/* Only have right yellow cards */
+@media (max-width:768px){
+    .right-select-bar{
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* preview-button-PC and preview-button-mobile decide showing the smartphone */
+.preview-button-PC{
+    display: block;
+    gap: 8px
+}
+
+.preview-button-mobile{
+    display: none;
+    gap: 0
+}
+
+@media (max-width:845px){
+    .preview-button-PC{
+        display: none;
+        gap: 0
+    }
+
+    .preview-button-mobile{
+        display: block;
+        gap: 8px
+    }
+}
+
+.editscreen-list-collapse{
+    border: none;
+    border-radius: 0px;
+}
+
+/* list被選中 */
+.editscreen-list-selected{
+background: #F69653;
+}
+
+
+/* list未選中 -> 默認 */
+.editscreen-list-unselected{
+    background: #538CF6;
+}
+
+
+/* #F7E9DF */
+
+/* 下放編輯按鈕顏色 */
+.preview-button{
+    background: linear-gradient(0deg, #F69653 0%, #F69653 100%);
+    color: black;
+    border-color: black;
+}
+.preview-button:hover{
+    background: linear-gradient(0deg, #F69653 0%, #FFAC70 100%);
+    color: #5C5C5C;
+    border-color: white;
+}
+.preview-button:focus{
+    background: linear-gradient(0deg, #F69653 0%, #FFAC70 100%);
+    color: #5C5C5C;
+    border-color: white;
+}
+
+.save-release-button{
+    background: linear-gradient(0deg, #538CF6 0%, #538CF6 100%);
+    color: black;
+    border-color: black;
+}
+.save-release-button:hover{
+    background: linear-gradient(0deg, #538CF6 0%, #70A2FF 100%);
+    color: #5C5C5C;
+    border-color: white;
+}
+.save-release-button:focus{
+    background: linear-gradient(0deg, #538CF6 0%, #70A2FF 100%);
+    color: #5C5C5C;
+    border-color: white;
+}
+
+
+.default-button{
+    background: linear-gradient(0deg, #F55D47 0%, #F55D47 100%);
+    color: black;
+    border-color: black;
+}
+.default-button:hover {
+    background: linear-gradient(0deg, #F55D47 0%, #FF7863 100%);
+    color: #5C5C5C;
+    border-color: white;
+}
+.default-button:focus{
+    background: linear-gradient(0deg, #F55D47 0%, #FF7863 100%);
+    color: #5C5C5C;
+    border-color: white;
+}
+
+.delete-item-icon{
+    cursor: pointer;
+}

@@ -1,0 +1,60 @@
+.phone-style{
+    background-image: url("/public/img/phonestyleDis.svg");
+    width: 410px;
+    height: 740px;
+    position: absolute; 
+    z-index         : 10;
+}
+
+
+#phaser-container {
+    width           : 100% !important;
+    height          : 640px !important;
+	margin-top      : 50px;
+	display			: flex;
+	justify-content	: center;
+    z-index         : 10;
+}
+
+.game-style-top{
+    z-index: 20 !important;
+}
+
+@media (max-height:850px){
+    #phaser-container{ 
+        margin  : auto;
+        width   : auto !important;
+        height  : 80% !important;
+        position: absolute;
+        z-index : 10;
+        display : flex;
+    }
+
+    .phone-style{
+        background-image: url("/public/img/phonestyleDis.svg");
+        width: 410px;
+        height: 740px;
+        position: absolute; 
+        display: none;
+    }
+}
+
+@media (max-width:440px){
+    #phaser-container{ 
+        margin  : auto;
+        width   : 90% !important;
+        height  : 80% !important;
+        position: absolute;
+        z-index : 10;
+        display : flex;
+    }
+
+    .phone-style{
+        background-image: url("/public/img/phonestyleDis.svg");
+        width: 410px;
+        height: 740px;
+        position: absolute; 
+        display: none;
+    }
+}
+

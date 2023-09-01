@@ -1,0 +1,32 @@
+.default-file-box .ant-card-body{
+    padding: 16px;
+    background: #F7E9DF;
+}
+
+.default-file-box .ant-card-bordered{
+    border-radius: 0;
+    border: none;
+}
+
+.default-file-box .ant-card-bordered .ant-card-cover{
+    margin: 0;
+    background-color: #F7E9DF;
+}
+
+.default-file-box .ant-card-head{
+    border-color: black;
+    border: none;
+    border-radius: 0;
+}
+
+.ant-card-meta-detail{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.default-card-img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    padding: 8px 0;
+}

@@ -27,9 +27,13 @@ export default class GameAchievement{
             wordWrap: { width: 240, useAdvancedWrap: true }
         }
         //let gameAchievement;
-        for (let i = 0; i < 5; i++){
-            if(this.messages[i].starAmount === this.messages[i + 1].starAmount && i !== 4) {
-                this.scene.add.text(65,220,"\n\n" + this.messages[i].message,gameAchievementStyle).setDepth(30);
+        for (let i = 0; i < 4; i++){
+            console.log(i)
+            this.scene.add.text(65,220,"\n\n" + this.messages[i].message,gameAchievementStyle).setDepth(30);
+            if(this.messages[i].starAmount === this.messages[i + 1].starAmount) {
+                continue;
+            } else {
+                break;
             }
         }
         // else if (this.messages[0].starAmount === this.messages[1].starAmount === this.messages[2].starAmount === this.messages[3].starAmount === this.messages[4].starAmount){

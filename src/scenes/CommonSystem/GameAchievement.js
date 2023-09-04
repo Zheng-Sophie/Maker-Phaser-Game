@@ -28,9 +28,10 @@ export default class GameAchievement{
         }
         //let gameAchievement;
         for (let i = 0; i < 4; i++){
-            console.log(i)
-            this.scene.add.text(65,220,"\n\n" + this.messages[i].message,gameAchievementStyle).setDepth(30);
+                this.scene.add.text(65,220 + i * 32,"\n\n" + this.messages[i].message,gameAchievementStyle).setDepth(30);
             if(this.messages[i].starAmount === this.messages[i + 1].starAmount) {
+                if(i === 3)
+                    this.scene.add.text(65,220 + (i + 1) * 32,"\n\n" + this.messages[i + 1].message,gameAchievementStyle).setDepth(30);
                 continue;
             } else {
                 break;

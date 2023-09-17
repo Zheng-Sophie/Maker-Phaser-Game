@@ -58,8 +58,6 @@ export default class PinballGameScene extends Phaser.Scene{
         this.matter.world.setGravity(0,0.98).setBounds()
         this.cursors = this.input.keyboard.createCursorKeys();
 
-    
-
         //background custom OK.
         const {background} = this.modifyDatas
         this.add.image(background.items[0].img.position.x, background.items[0].img.position.y ,'background').setScale(background.items[0].img.size/100)
@@ -107,8 +105,6 @@ export default class PinballGameScene extends Phaser.Scene{
                 "strokeThickness": 2
             })
         }
-        
-
 
         //新球碰到這個hitbox後會開啟時間
         this.shootHitBox = this.createRectHitBox({x: 60, y: 3, label: 'shootHitBox'}, {x: 305, y: 549}, 'pinWall')
@@ -118,6 +114,9 @@ export default class PinballGameScene extends Phaser.Scene{
         this.gameTutorialMessage = new GameTutorial(this,gameTutorialText.items[0])
         this.gameTutorialMessage.create()
 
+        //gameoverMessage
+        const {gameoverMessage} = this.modifyDatas
+        this.gameoverMessage = new GameoverMessage(this, this.scoreText.getScore(), gameoverMessage.items[0])
 
         //用來偵測碰撞物體的function
         this.matter.world.on('collisionstart', function (event) {
@@ -174,10 +173,8 @@ export default class PinballGameScene extends Phaser.Scene{
 
     gameover(){
         console.log("gameover!");
-        const {gameoverMessage} = this.modifyDatas
         this.gameOver = true
-        this.gameoverMessage = new GameoverMessage(this,this.scoreText.getScore(),gameoverMessage.items[0])
-        this.gameoverMessage.create()
+        this.gameoverMessage.create(this.scoreText.getScore())
     }
 
     setPinballToReady(){

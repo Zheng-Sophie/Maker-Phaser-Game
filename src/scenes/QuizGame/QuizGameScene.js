@@ -58,8 +58,9 @@ export default class QuizGameScene extends Phaser.Scene{
         this.scoreText = new Score(this,scoreTextLabel,'得分',0)
         this.scoreText.showScoreText()
 
-
-
+        //gameoverMessage
+        const {gameoverMessage} = this.modifyDatas
+        this.gameoverMessage = new GameoverMessage(this, this.scoreText.getScore(), gameoverMessage.items[0])
 
         const {questions,gameTutorialText} = this.modifyDatas
         this.questions = []
@@ -189,11 +190,8 @@ export default class QuizGameScene extends Phaser.Scene{
     }
 
     gameover(){
-        const {gameoverMessage} = this.modifyDatas
-        
         this.physics.pause()
-        this.gameoverMessage = new GameoverMessage(this,this.scoreText.getScore(),gameoverMessage.items[0])
-        this.gameoverMessage.create()
+        this.gameoverMessage.create(this.scoreText.getScore())
     }
 
 

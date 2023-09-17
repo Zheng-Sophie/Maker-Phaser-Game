@@ -75,7 +75,7 @@ export default class ShootingGameScene extends Phaser.Scene{
         this.cursor = this.input.keyboard.createCursorKeys()
         this.add.image(170,550,'gun').setScale(0.21,0.21).setDepth(1);
 
-        
+        //gameoverMessage
         
 
         //gameStart Tutorial
@@ -90,7 +90,7 @@ export default class ShootingGameScene extends Phaser.Scene{
         this.physics.pause()
         this.starCoolDown.stop()
         this.gameoverMessage = new GameoverMessage(this,this.scoreText.getScore(),gameoverMessage.items[0])
-        this.gameoverMessage.create()
+        this.gameoverMessage.create(this.scoreText.getScore())
     }
 
     createGameTimer(gameTimer){

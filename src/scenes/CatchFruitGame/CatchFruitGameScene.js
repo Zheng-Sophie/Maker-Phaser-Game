@@ -117,7 +117,7 @@ export default class CatchFruitGameScene extends Phaser.Scene{
         this.gameTutorialMessage = new GameTutorial(this, star.items , gameTutorialText.items[0])
         this.gameTutorialMessage.create()
 
-        //gameOver
+        //gameoverMessage
         const {gameoverMessage} = this.modifyDatas
         this.gameoverMessage = new GameoverMessage(this, this.scoreText.getScore(), gameoverMessage.items[0])
         this.gameAchievement = new GameAchievement(this, 0, gameoverMessage.items[1])

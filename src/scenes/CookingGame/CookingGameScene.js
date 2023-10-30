@@ -190,7 +190,7 @@ export default class CookingGameScene extends Phaser.Scene{
         //遊戲結束評語
         const {gameoverMessage} = this.modifyDatas
         this.gameoverMessage = new GameoverMessage(this,this.scoreText.getScore(),gameoverMessage.items[0])
-        this.gameoverMessage.create()
+        this.gameoverMessage.create(this.scoreText.getScore())
     }
 
     createTrashCan(){

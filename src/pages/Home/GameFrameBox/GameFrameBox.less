@@ -5,7 +5,6 @@
     border-top: 4px solid #452813;
     text-align: center;
   }
-  
 .frame-title{
   background: #F69653;
   border-radius: 50px;
@@ -20,10 +19,10 @@
   border-radius: 10px;
   padding: 10px 35px 50px 35px;
   
-  margin-left: auto;margin-right: auto;
-  
   font-size: 22px;
+  display: flex;
 
+  justify-content: center;
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 2px 5px black;
@@ -31,4 +30,39 @@
     color: black;
     cursor: pointer;
   }
+}
+.startbutton-image{
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px; /* 可选的圆角 */
+  justify-content: center;
+  width: 63px;
+  height: 63px;
+}
+.spacer{ //圖片下方空一行
+  height: 20px;
+}
+.buttonrow{ //modal 中按鍵水平排列且中間分開
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.centered-modal {
+  max-width: 90%; /* 根据需要调整最大宽度 */
+  max-height: 80vh; /* 根据需要调整最大高度 */
+  margin: 0 auto; /* 水平居中 */
+  text-align: center; /* 文本水平置中 */
+  
+}
+.centered-modal img {
+  max-width: 100%; /* 图像的最大宽度为 Modal 的宽度 */
+  max-height: 100%; /* 图像的最大高度为 Modal 的高度 */
+  display: block; /* 使图像居中 */
+  margin: 0 auto; /* 水平居中 */
+}
+.centered-title {
+  font-size: 24px; /* 調整字體大小，使其放大 */
+  margin-bottom: 20px; /* 添加下邊距以調整垂直位置 */
+  color: #F69653;
 }

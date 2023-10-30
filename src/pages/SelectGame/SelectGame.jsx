@@ -85,7 +85,7 @@ export default class ChooseGame extends Component {
         ]
 
         const contentStyle = {
-            height: `${height-64}px`,
+            height: `${height-100}px`,
             color: '#fff',
             lineHeight: '100px',
             textAlign: 'center',

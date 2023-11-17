@@ -75,7 +75,8 @@ export default class QuizGameScene extends Phaser.Scene{
         }
 
         //gameStart Tutorial
-        this.gameTutorialMessage = new GameTutorial(this,gameTutorialText.items[0])
+        const {gameEndTimer} = this.modifyDatas
+        this.gameTutorialMessage = new GameTutorial(this,gameTutorialText.items[0], gameEndTimer.items[0])
         this.gameTutorialMessage.create()
     }
 

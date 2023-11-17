@@ -51,7 +51,7 @@ export default class IntroSampleBox extends Component {
                         </Paragraph>
                     </Typography>
                 ),
-                src: "mom1.png"
+                src: "takoyaki.png"
             },
             {
                 content: ( 
@@ -96,7 +96,7 @@ export default class IntroSampleBox extends Component {
                     <List.Item style={{ marginBottom: "32px" }}>
                         <Card 
                             hoverable
-                            style={{background: "#F69653", padding: "10px",borderRadius: "6px"}} 
+                            style={{background: "#F7E9DF", padding: "10px",borderRadius: "6px"}} 
                             headStyle={{borderBottom: "none"}}
                             bordered={false}  
                             title={item.title}

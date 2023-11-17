@@ -1,8 +1,9 @@
 export default class GameoverMessage{
-    constructor(scene,items,gameoverMessage){
+    constructor(scene,items,gameoverMessage, days){
         this.scene = scene
         this.items = items 
         this.gameoverMessage = gameoverMessage
+        this.days = days
     }
 
     create(){
@@ -28,12 +29,16 @@ export default class GameoverMessage{
         }
         let description = this.scene.add.text(50, 150, "\n"+ this.gameoverMessage[0].text.content, style).setDepth(29)
         
+
+
         playAgainButton.setInteractive().on('pointerdown',function(){
             scoreText.destroy()
             gameoverLabel.destroy()
             playAgainButton.destroy()
             this.scene.scene.restart()
         },this)
+       
+        
     }
 } 
 

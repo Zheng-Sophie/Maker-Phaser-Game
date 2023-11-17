@@ -20,35 +20,35 @@
 }
 
 .select-footer{
-    background-color: #090225 !important;
+    background-color: #FFB6C1 !important;
 }
 
 /* 選擇左右箭頭 */
 .ant-pagination-item-link{
-    background: linear-gradient(0deg, #538CF6 0%, #538CF6 100%) !important;
+    background: linear-gradient(0deg, #FFF89A 0%, #FFF89A 100%) !important;
     border-color: #c2c2c2 !important;
 }
 .ant-pagination-item-link:hover{
-    background: linear-gradient(0deg, #538CF6 0%, #70A2FF 100%) !important;
-    color: #F69653 !important;
+    background: linear-gradient(0deg, #FFF89A 0%, #F9E900 100%) !important;
+    color: rgb(90, 46, 15) !important;
     border-color: #c2c2c2 !important;
 }
 
 
 /* 選擇數字按鈕 */
 .ant-pagination-item{
-    background: linear-gradient(0deg, #538CF6 0%, #538CF6 100%) !important;
-    border-color: black;
+    background: linear-gradient(0deg, #FFF89A 0%, #FFF89A 100%) !important;
+    border-color: rgb(90, 46, 15);
 }
 
 .ant-pagination-item:hover{ /*滑鼠停在上面*/
-    background: linear-gradient(0deg, #538CF6 0%, #70A2FF 100%) !important;
-    color: #F69653 !important;
+    background: linear-gradient(0deg, #FFF89A 0%, #F9E900 100%) !important;
+    color: rgb(90, 46, 15) !important;
     border-color: #c2c2c2 !important;
 }
 
 .ant-pagination-item-active{
-    color: #F69653 !important;
+    color: rgb(90, 46, 15) !important;
     font-weight: normal;
     border-color: #c2c2c2 !important;
 }

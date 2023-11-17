@@ -73,7 +73,7 @@ export default class IntroStepBox extends Component {
                         // render出3個步驟圖標
                         <List.Item style={{ marginBottom: "32px" }}>
                             <Card 
-                                style={{background: "#F7E9DF"}} 
+                                style={{background: "#FFC0C8"}} 
                                 headStyle={{borderBottom: "none", padding:"0px"}}
                                 bordered={false}  
                                 title={item.title}

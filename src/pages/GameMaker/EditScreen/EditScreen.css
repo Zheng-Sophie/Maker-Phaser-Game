@@ -1,6 +1,4 @@
 
-
-
 .fixed-game-footer{
     bottom: 0;
     left: 0;
@@ -64,52 +62,52 @@
 
 /* list被選中 */
 .editscreen-list-selected{
-background: #F69653;
+background: #FFC0C8;
 }
 
 
 /* list未選中 -> 默認 */
 .editscreen-list-unselected{
-    background: #538CF6;
+    background: #FFF89A;
 }
 
 
 /* #F7E9DF */
 
 /* 下放編輯按鈕顏色 */
+/*預覽變化*/
 .preview-button{
-    background: linear-gradient(0deg, #F69653 0%, #F69653 100%);
+    background: linear-gradient(0deg, #FFC0C8 0%, #FFC0C8 100%);
     color: black;
     border-color: black;
 }
 .preview-button:hover{
-    background: linear-gradient(0deg, #F69653 0%, #FFAC70 100%);
+    background: linear-gradient(0deg, #FFC0C8 0%, #FF8D9E 100%);
     color: #5C5C5C;
     border-color: white;
 }
 .preview-button:focus{
-    background: linear-gradient(0deg, #F69653 0%, #FFAC70 100%);
+    background: linear-gradient(0deg, #FFC0C8 0%, #FF8D9E 100%);
     color: #5C5C5C;
     border-color: white;
 }
-
+/*儲存、生成遊戲按鈕*/
 .save-release-button{
-    background: linear-gradient(0deg, #538CF6 0%, #538CF6 100%);
+    background: linear-gradient(0deg, #FFF89A 0%, #FFF89A 100%);
     color: black;
     border-color: black;
 }
 .save-release-button:hover{
-    background: linear-gradient(0deg, #538CF6 0%, #70A2FF 100%);
+    background: linear-gradient(0deg, #FFF89A 0%, #FFEE00 100%);
     color: #5C5C5C;
     border-color: white;
 }
 .save-release-button:focus{
-    background: linear-gradient(0deg, #538CF6 0%, #70A2FF 100%);
+    background: linear-gradient(0deg, #FFF89A 0%, #FFEE00 100%);
     color: #5C5C5C;
     border-color: white;
 }
-
-
+/*回到默認資料*/
 .default-button{
     background: linear-gradient(0deg, #F55D47 0%, #F55D47 100%);
     color: black;

@@ -315,13 +315,10 @@ class GameFrameBox extends Component {
                             </Paragraph>
                             <img src='/img/FrameBox/gameInstruction.png' alt='遊戲說明'/>
                             <div className='spacer'></div>
-                            <div className='buttonrow'>
-                                <Button className="startbutton" type="primary" size="large">
-                                    敬 請 期 待 !
-                                </Button>
-                                <Button className="startbutton" type="primary" size="large">
-                                    前 往 推 薦 2 !
-                                </Button>
+                            <div className='buttonrow-single'>
+                                <a href='#'>
+                                    <img className="startbutton-image" src='/img/FrameBox/waiting.png'></img>
+                                </a>
                             </div>
                         </Modal>
                     </Typography>
@@ -434,7 +431,7 @@ class GameFrameBox extends Component {
                     <List.Item style={{ marginBottom: "32px" }}>
                         <Card 
                             hoverable
-                            style={{background: "#F69653", padding: "10px",borderRadius: "6px"}} 
+                            style={{background: "#F7E9DF", padding: "10px",borderRadius: "6px"}} 
                             headStyle={{borderBottom: "none"}}
                             bordered={false}  
                             title={item.title}

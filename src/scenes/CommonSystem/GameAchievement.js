@@ -17,7 +17,7 @@ export default class GameAchievement{
         
     }
     create(){
-        console.log(this.star1, this.star2, this.star3, this.star4, this.star5)
+        //console.log(this.star1, this.star2, this.star3, this.star4, this.star5)
         this.messages.sort(function(a, b) {
             return b.starAmount - a.starAmount;
         })
@@ -41,7 +41,7 @@ export default class GameAchievement{
         //     this.scene.add.text(65,220,"\n\n" + this.messages[5].message,gameAchievementStyle).setDepth(30);
         // }
         
-        console.log(this.messages[0].starAmount)
+        //console.log(this.messages[0].starAmount)
     }
     countStar(starType){
         if(starType === "star1") {

@@ -12,7 +12,6 @@ import GameAchievement from "../CommonSystem/GameAchievement"
 import StarsSpawner from "./StarsSpawner"
 import GameTutorial from "./GameTutorial"
 
-
 export default class CatchFruitGameScene extends Phaser.Scene{
 
     constructor(){
@@ -45,7 +44,6 @@ export default class CatchFruitGameScene extends Phaser.Scene{
         this.load.image('arrowButton','/img/Games/CatchFruitGame/arrowButton.png');
 
         this.load.image('player','/img/Games/CatchFruitGame/boy.png');
-        
         // this.load.spritesheet('dude','/img/Games/CatchFruitGame/dude.png',{
         //     frameWidth: 32, frameHeight:48
         // });
@@ -92,6 +90,7 @@ export default class CatchFruitGameScene extends Phaser.Scene{
     }
 
     create(){ //第三步
+        
         this.isGameStart = false
 
         this.playerMoveSpeed = 400
@@ -114,7 +113,8 @@ export default class CatchFruitGameScene extends Phaser.Scene{
 
         //gameStart Tutorial
         const {gameTutorialText} = this.modifyDatas
-        this.gameTutorialMessage = new GameTutorial(this, star.items , gameTutorialText.items[0])
+        const {gameEndTimer} = this.modifyDatas
+        this.gameTutorialMessage = new GameTutorial(this, star.items , gameTutorialText.items[0], gameEndTimer.items[0])
         this.gameTutorialMessage.create()
 
         //gameoverMessage
@@ -129,6 +129,7 @@ export default class CatchFruitGameScene extends Phaser.Scene{
 
         // related to button 左箭頭右箭頭
         this.createMovingArrow()
+    
     }
 
     handleCountDownFinished(){ //產星星，第 61 行

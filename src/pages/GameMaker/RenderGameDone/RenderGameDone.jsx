@@ -67,10 +67,12 @@ class RenderGameDone extends Component {
                         <Title level={3} >以下是生成出來的鏈接 :</Title>
                         <pre>
                             <Paragraph copyable>
-                                {"http://140.134.26.66:5051/" + gameUrl}
+                                {"https://d77a-211-20-144-247.ngrok-free.app/" + gameUrl}
                             </Paragraph>
-
-                            <LineShareButton className='line-share-button' size={12} title='分享！' url={"http://140.134.26.66:5051/" + gameUrl} />
+                            {/*<Paragraph copyable>
+                                {"http://140.134.26.66:5051/" + gameUrl}
+                            </Paragraph> */}
+                            <LineShareButton className='line-share-button' size={12} title='分享！' url={"https://d77a-211-20-144-247.ngrok-free.app/" + gameUrl} />
                         </pre>
                     </Typography>
 

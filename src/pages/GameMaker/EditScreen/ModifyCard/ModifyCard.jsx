@@ -11,6 +11,7 @@ import PriorityCard from './PriorityCard/PriorityCard'
 import GameoverMessage from './GameoverMessage/GameoverMessage'
 import SelectionCard from './selectionCard/SelectionCard'
 import GameAchievement from './GameAchievement/GameAchievement'
+import GameEndTimer from './GameEndTimer/GameEndTimer'
 
 import './ModifyCard.css'
 
@@ -25,7 +26,7 @@ export default class ModifyCard extends Component {
 
   render() {
 
-    const {modifyTitle,img,text,name,question,score,priority,gameoverMessage,selection,gameachievement} = this.props
+    const {modifyTitle,img,text,name,question,score,priority,gameoverMessage,selection,gameachievement,gameEndTimer} = this.props
     const {activeTab} = this.state
     const changeTab = (key) => {
       this.setState({activeTab: key})
@@ -76,8 +77,7 @@ export default class ModifyCard extends Component {
                 <Panel style={{background: activeTab === gameoverMessage.modifyTitle ? "linear-gradient(0deg, #F69653 0%, #FFAC70 100%)" : "#538CF6"}} header={<Title level={4} style={{margin: 0}}>{gameoverMessage.modifyTitle}</Title>} key={gameoverMessage.modifyTitle}>
                   <GameoverMessage {...this.props}></GameoverMessage>
                 </Panel>
-              :
-                <div></div>
+              : <div></div>
             }
 
             {
@@ -85,8 +85,7 @@ export default class ModifyCard extends Component {
                 <Panel style={{background: activeTab === question.modifyTitle ? "linear-gradient(0deg, #F69653 0%, #FFAC70 100%)" : "#538CF6"}} header={<Title level={4} style={{margin: 0}}>{question.modifyTitle}</Title>} key={question.modifyTitle}>
                   <QuestionCard {...this.props}></QuestionCard>
                 </Panel>
-              :
-              <div></div>
+              : <div></div>
             }
 
             {
@@ -101,6 +100,14 @@ export default class ModifyCard extends Component {
               gameachievement ? 
                 <Panel style={{background: activeTab === gameachievement.modifyTitle ? "linear-gradient(0deg, #F69653 0%, #FFAC70 100%)" : "#538CF6"}} header={<Title level={4} style={{margin: 0}}>{gameachievement.modifyTitle}</Title>} key={gameachievement.modifyTitle}>
                   <GameAchievement {...this.props}></GameAchievement>
+                </Panel>
+              : <div></div>
+            }
+
+            {
+              gameEndTimer ? 
+                <Panel style={{background: activeTab === gameEndTimer.modifyTitle ? "linear-gradient(0deg, #F69653 0%, #FFAC70 100%)" : "#538CF6"}} header={<Title level={4} style={{margin: 0}}>{gameEndTimer.modifyTitle}</Title>} key={gameEndTimer.modifyTitle}>
+                  <GameEndTimer {...this.props}></GameEndTimer>
                 </Panel>
               : <div></div>
             }

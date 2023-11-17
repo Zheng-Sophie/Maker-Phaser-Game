@@ -3,6 +3,7 @@ import Phaser from "phaser";
 
 //Common System Scripts
 import UsefulMath from "../CommonSystem/UsefulMath";
+import GameEndTimer from "../CommonSystem/GameEndTimer";
 
 //PokeGetItem Game Scripts
 import WordDisappearTimer from './WordDisappearTimer';
@@ -46,6 +47,7 @@ export default class PokeGetItemGameScene extends Phaser.Scene{
     gameover(){
         //遊戲結束評語
         const {gameoverMessage} = this.modifyDatas
+        
         this.gameoverMessage = new GameoverMessage(this,this.getItemObjs,gameoverMessage.items)
         this.gameoverMessage.create()
     }
@@ -63,8 +65,7 @@ export default class PokeGetItemGameScene extends Phaser.Scene{
 
         this.add.image(180,400,'box')
 
-        
-
+                
         //顯示提示訊息
         const {gameMessage} = this.modifyDatas
         const gameMessageStyle = {
@@ -87,6 +88,10 @@ export default class PokeGetItemGameScene extends Phaser.Scene{
             wordWrap: { width: 320, useAdvancedWrap: true }
         }
         this.hitTimesText = this.add.text(20,6, '\n您還可以戳 ' + this.hitTimes + ' 次', hitTimesStyle)
+        
+        const {gameEndTimer} = this.modifyDatas
+        this.gameEndTimer = new GameEndTimer(gameEndTimer.items[0])
+        this.add.text(45, 570, "\n剩餘"+ this.gameEndTimer.create("month") + "月" + this.gameEndTimer.create("day") + "日" + this.gameEndTimer.create("hours") + "時" + this.gameEndTimer.create("minutes") + "分", hitTimesStyle).setDepth(30)
 
         //生成盒子外觀，盒子裡的物品
         const {boxObject,boxSkin} = this.modifyDatas
@@ -145,6 +150,4 @@ export default class PokeGetItemGameScene extends Phaser.Scene{
             },this)
         }, this)
     }
-
-
 }

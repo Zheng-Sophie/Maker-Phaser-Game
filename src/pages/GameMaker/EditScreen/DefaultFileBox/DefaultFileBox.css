@@ -1,6 +1,6 @@
 .default-file-box .ant-card-body{
     padding: 16px;
-    background: #F7E9DF;
+    background: #F7D5DA;
 }
 
 .default-file-box .ant-card-bordered{
@@ -10,7 +10,7 @@
 
 .default-file-box .ant-card-bordered .ant-card-cover{
     margin: 0;
-    background-color: #F7E9DF;
+    background-color: #F7D5DA;
 }
 
 .default-file-box .ant-card-head{

@@ -91,14 +91,14 @@ export default class ModifyTabDrawer extends Component {
                 {
                     // 電腦等裝置size大的drawer
                     width >= 1000 ? 
-                        <Drawer destroyOnClose={true} drawerStyle={{background:"#F69653", borderRadius: 0}} push={false} width={width - 410} zIndex="10" title={<Title level={4} style={{margin: 0}}>{modifyTitle}</Title>} placement="right" onClose={this.closeDrawer} open={visible}>
+                        <Drawer destroyOnClose={true} drawerStyle={{background:"#FF8D9E", borderRadius: 0}} push={false} width={width - 410} zIndex="10" title={<Title level={4} style={{margin: 0}}>{modifyTitle}</Title>} placement="right" onClose={this.closeDrawer} open={visible}>
                             <Col span={width >= 1350 ?15: width >= 1120 ? 14 : 13}>
 
                                 {/* 內部細項設定 */}
                                 <ModifyCard {...this.props}></ModifyCard>
 
                                 {/* 開啟預設圖片的drawer */}
-                                <Drawer drawerStyle={{background:"#F69653"}} push={false} width={width - 410} zIndex="10" title={<Title level={4} style={{margin: 0}}>使用預設圖片</Title>} placement="right" onClose={this.closeDefaultCardDrawer} open={isDefaultDrawerOpened}>
+                                <Drawer drawerStyle={{background:"#FF8D9E"}} push={false} width={width - 410} zIndex="10" title={<Title level={4} style={{margin: 0}}>使用預設圖片</Title>} placement="right" onClose={this.closeDefaultCardDrawer} open={isDefaultDrawerOpened}>
                                     <Col span={width >= 1350 ?15: width >= 1120 ? 14 : 13}>
                                         {/* 顯示預設檔案的drawer */}
                                         <DefaultFileBox defaultFilesData={defaultFilesData} gameId={gameId}></DefaultFileBox>
@@ -109,13 +109,13 @@ export default class ModifyTabDrawer extends Component {
                         </Drawer> 
                     :
                         // 手機等裝置size小的drawer
-                        <Drawer destroyOnClose={true} drawerStyle={{background:"#F69653"}} width={width} zIndex={width >= 845 ?10:0}  title={<Title level={4} style={{margin: 0}}>{modifyTitle}</Title>} placement="right" onClose={this.closeDrawer} open={visible}>
+                        <Drawer destroyOnClose={true} drawerStyle={{background:"#FF8D9E"}} width={width} zIndex={width >= 845 ?10:0}  title={<Title level={4} style={{margin: 0}}>{modifyTitle}</Title>} placement="right" onClose={this.closeDrawer} open={visible}>
                             <Col span={width >= 845 ?15:24}>
                                 {/* 內部細項設定 */}
                                 <ModifyCard {...this.props}></ModifyCard>
 
                                 {/* 開啟預設圖片的drawer */}
-                                <Drawer drawerStyle={{background:"#F69653"}} push={false} width={width} zIndex={width >= 845 ?10:0}  title={<Title level={4} style={{margin: 0}}>使用預設圖片</Title>} placement="right" onClose={this.closeDefaultCardDrawer} open={isDefaultDrawerOpened}>
+                                <Drawer drawerStyle={{background:"#FF8D9E"}} push={false} width={width} zIndex={width >= 845 ?10:0}  title={<Title level={4} style={{margin: 0}}>使用預設圖片</Title>} placement="right" onClose={this.closeDefaultCardDrawer} open={isDefaultDrawerOpened}>
                                     <Col span={width >= 845 ?15:24}>
                                         {/* 顯示預設檔案的drawer */}
                                         <DefaultFileBox defaultFilesData={defaultFilesData} gameId={gameId}></DefaultFileBox>

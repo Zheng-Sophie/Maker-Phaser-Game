@@ -58,9 +58,7 @@ export default class CookingGameScene extends Phaser.Scene{
 
         //background custom OK.
         const {background} = this.modifyDatas
-        this.add.image(background.items[0].img.position.x, background.items[0].img.position.y ,'background').setScale(background.items[0].img.size/100)
-
-        
+        this.add.image(background.items[0].img.position.x, background.items[0].img.position.y ,'background').setScale(background.items[0].img.size/100)       
 
         this.add.image(400,480,'panel').setDepth(1);
         this.add.image(400,620,'blackBlock').setDepth(1)
@@ -69,17 +67,13 @@ export default class CookingGameScene extends Phaser.Scene{
 
         this.cookHitBoxGroup = this.createCookHitBox()
 
-        
-
-        
-
         //開啟碰撞
         this.setInputInteractive()
         
-
         //gameStart Tutorial
         const {gameTutorialText,food} = this.modifyDatas
-        this.gameTutorialMessage = new GameTutorial(this,food.items, gameTutorialText.items[0])
+        const {gameEndTimer} = this.modifyDatas
+        this.gameTutorialMessage = new GameTutorial(this,food.items, gameTutorialText.items[0], gameEndTimer.items[0])
         this.gameTutorialMessage.create()
     }
 
@@ -165,7 +159,11 @@ export default class CookingGameScene extends Phaser.Scene{
                         this.customer.setTexture('happyCustomer')
                         this.scoreText.addScore(food.items[3].score.content)
                         break
-                    case 'overcookedFood':
+                    // case 'overcookedFood':
+                    //     this.customer.setTexture('angryCustomer')
+                    //     this.scoreText.addScore(food.items[4].score.content)
+                    //     break
+                    default:
                         this.customer.setTexture('angryCustomer')
                         this.scoreText.addScore(food.items[4].score.content)
                         break

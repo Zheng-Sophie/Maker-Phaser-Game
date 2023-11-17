@@ -1,12 +1,13 @@
 /* modifyCard 所有card head的style改變 */
 .modify-card-collapse .ant-card-head{
     border-radius: 0;
-    background: linear-gradient(0deg, rgb(246, 150, 83) 0%, rgb(255, 172, 112) 100%);
+    background: linear-gradient(0deg, #FFBEC8 0%, #FF8D9E 100%);
+    /*rgb(246, 150, 83) rgb(255, 172, 112)*/
 }
 
 /* modifyCard 所有card 內容改變 */
 .modify-card-collapse .ant-card-body{
-    background: #F7E9DF;
+    background: #F7D5DA;
 }
 
 /* 上傳檔案的垃圾桶顯示 */
@@ -18,10 +19,11 @@
     margin-left: 15px;
 }
 
-
+/*調整的背景*/
 .modify-card{
     margin-bottom: 30px;
-    background-color: orange;
+    background-color: #FFC0C8;
+    /*orange*/
 }
 
 .modify-card-title{
@@ -30,6 +32,6 @@
 }
 
 .modify-card-collapse .ant-collapse-content-box{
-    background-color: #F7E9DF;
+    background-color: #F7D5DA;
     padding: 0;
 }

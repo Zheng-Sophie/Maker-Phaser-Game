@@ -89,8 +89,8 @@ export default class ChooseGame extends Component {
             color: '#fff',
             lineHeight: '100px',
             textAlign: 'center',
-            background: 'linear-gradient(180deg, #fbb89e 0%, #f9a852 100%)',
-        };
+            background: 'linear-gradient(180deg, #FFC0C8 0%, #F7E9DF 100%)',
+        };//fbb89e f9a852
         const {nowPage} = this.state
 
         return (

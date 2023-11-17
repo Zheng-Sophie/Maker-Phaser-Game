@@ -43,10 +43,10 @@ export default class Home extends Component {
         <Layout>
             <IntroStartBox></IntroStartBox>
             <IntroFeatureBox></IntroFeatureBox>
-            <IntroSampleBox width={width}></IntroSampleBox>
+            
             <GameFrameBox width={width}></GameFrameBox>
             <IntroStepBox width={width}></IntroStepBox>
-
+            <IntroSampleBox width={width}></IntroSampleBox>
             {/* 回到首頁按鈕 */}
             <BackTop duration={300}>
               <div className='back-top-button'>

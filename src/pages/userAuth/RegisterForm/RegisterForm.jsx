@@ -34,7 +34,7 @@ class RegisterForm extends Component {
               alert(response.data.message)
             }
           },
-          error => {console.log(error);}
+          error => {console.log(error);},
         )
       }
     };

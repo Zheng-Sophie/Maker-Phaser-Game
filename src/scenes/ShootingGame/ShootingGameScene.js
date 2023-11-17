@@ -80,7 +80,8 @@ export default class ShootingGameScene extends Phaser.Scene{
 
         //gameStart Tutorial
         const {balloon,gameTutorialText} = this.modifyDatas
-        this.gameTutorialMessage = new GameTutorial(this, balloon.items, gameTutorialText.items[0])
+        const {gameEndTimer} = this.modifyDatas
+        this.gameTutorialMessage = new GameTutorial(this, balloon.items, gameTutorialText.items[0], gameEndTimer.items[0])
         this.gameTutorialMessage.create()
 
     }

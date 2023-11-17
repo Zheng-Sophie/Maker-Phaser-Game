@@ -65,7 +65,7 @@ export default class DefaultFileBox extends Component {
                     {
                         defaultFileKeys.map((key) => {
                             return (
-                                <Panel style={{background: activeTab === key ? "linear-gradient(0deg, #F69653 0%, #FFAC70 100%)" : "#538CF6", padding: 0}} header={<Title level={4} style={{margin: 0}}>{defaultFilesData[key].title}</Title>} key={key}>
+                                <Panel style={{background: activeTab === key ? "linear-gradient(0deg, #FFC0C8 0%, #FFB6C1 100%)" : "#FFF89A", padding: 0}} header={<Title level={4} style={{margin: 0}}>{defaultFilesData[key].title}</Title>} key={key}>
                                     <List
                                         grid={{ gutter: 0, 
                                             xs: 2,
@@ -84,7 +84,8 @@ export default class DefaultFileBox extends Component {
                                                         onClick={selectDefaultCard(item.description)}
                                                         hoverable 
                                                         // loading={isLoading}
-                                                        headStyle={{background: selectedId === item.description ? "linear-gradient(0deg, rgb(246, 150, 83) 0%, rgb(255, 172, 112) 100%)" : "linear-gradient(0deg, #538CF6 0%, #70A2FF 100%)"}}
+                                                        //rgb(246, 150, 83) 0%, rgb(255, 172, 112)
+                                                        headStyle={{background: selectedId === item.description ? "linear-gradient(0deg, #FFC0C8 0%, #FFB6C1 100%)" : "linear-gradient(0deg, #538CF6 0%, #70A2FF 100%)"}}
                                                         cover={
                                                             <img
                                                                 className='default-card-img'

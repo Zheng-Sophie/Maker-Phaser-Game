@@ -277,12 +277,12 @@ class GameFrameBox extends Component {
                             <img src='/img/FrameBox/gameInstruction.png' alt='分享遊戲截圖'/>
                             <div className='spacer'></div>
                             <div className='buttonrow'>
-                                <Button onClick={this.goToGame("Cooking")} className="startbutton" type="primary" size="large">
+                                {/* <Button onClick={this.goToGame("Cooking")} className="startbutton" type="primary" size="large">
                                     前 往 推 薦 1 !
                                 </Button>
                                 <Button onClick={this.goToGame("Cooking")} className="startbutton" type="primary" size="large">
                                     前 往 推 薦 2 !
-                                </Button>
+                                </Button> */}
                             </div>
                         </Modal>
                     </Typography>
@@ -348,7 +348,7 @@ class GameFrameBox extends Component {
                                 <Text>遊玩中發現事情的結果和預想的不同<br/></Text>
                                 <Text>例如：遊戲掉落機率</Text>
                             </Paragraph>
-                            <img src='/img/sample/dropProbability.png' alt='遊戲掉落機率'/>
+                            <img src='/img/FrameBox/dropProbability.png' alt='遊戲掉落機率'/>
                             <div className='spacer'></div>
                             <div className='buttonrow'>
                                 <a href='#' onClick={this.goToGame("PokeGetItem")}>
@@ -387,7 +387,7 @@ class GameFrameBox extends Component {
                                 <Text>可以設定風險損失與懲罰，或是限定遊戲時間<br/></Text>
                                 <Text>例如：遊戲限定時間後關閉</Text>
                             </Paragraph>
-                            <img src='/img/FrameBox/gameInstruction.png' alt='遊戲限定時間後關閉'/>
+                            <img src='/img/FrameBox/gameEndTime.png' alt='遊戲限定時間後關閉'/>
                             <div className='spacer'></div>
                             <div className='buttonrow'>
                             <a href='#' onClick={this.goToGame("Shooting")}>

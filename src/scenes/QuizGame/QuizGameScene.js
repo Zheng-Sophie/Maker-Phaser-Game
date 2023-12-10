@@ -58,6 +58,10 @@ export default class QuizGameScene extends Phaser.Scene{
         this.scoreText = new Score(this,scoreTextLabel,'得分',0)
         this.scoreText.showScoreText()
 
+        //background
+        const {background} = this.modifyDatas
+        this.add.image(background.items[0].img.position.x, background.items[0].img.position.y ,'background').setScale(background.items[0].img.size/100)
+
         //gameoverMessage
         const {gameoverMessage} = this.modifyDatas
         this.gameoverMessage = new GameoverMessage(this, this.scoreText.getScore(), gameoverMessage.items[0])
@@ -94,8 +98,9 @@ export default class QuizGameScene extends Phaser.Scene{
         const style = {
             fontSize: 24,
             fill: "#fff",
+            color: "white",
             stroke: "#000",
-            backgroundColor: 'white',
+            //backgroundColor: 'white',
             strokeThickness: 2,
             fixedWidth: 360,
             fixedHeight: 55
@@ -110,14 +115,13 @@ export default class QuizGameScene extends Phaser.Scene{
             fontSize: 28,
             fontFamily: 'Arial',
             color: 'white',
-            backgroundColor: '#000000',
+            //backgroundColor: '#000000',
             fixedWidth: 360,
             fixedHeight: 250,
             wordWrap: { width: 350, useAdvancedWrap: true }
         }
 
         this.questionText = this.add.text(0,45, `問題 ${index}: \n` + item.question.question,questionStyle)
-
 
         let answerStyle = [
             {
@@ -179,6 +183,7 @@ export default class QuizGameScene extends Phaser.Scene{
                 }
                 if(this.questions.length > this.questionNumber + 1){
                     this.questionNumber++
+                    this.questionText.destroy()
                     this.createQuestion(this.questions[this.questionNumber], this.questionNumber+1)  
                 }else{
                     this.gameover()

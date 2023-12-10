@@ -6,6 +6,7 @@ import PokeGetItemGameScene from './scenes/PokeGetItemGame/PokeGetItemGameScene'
 import CatchFruitGameScene from './scenes/CatchFruitGame/CatchFruitGameScene';
 import CookingGameScene from './scenes/CookingGame/CookingGameScene';
 import PinballGameScene from './scenes/PinballGame/PinballGameScene';
+import MatchGame from './scenes/MatchGame/MatchGameScene';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 const modifyGameConfig = {
@@ -108,6 +109,7 @@ export default function startGame(gameId,gameModifyDatas,type){
 			case "PokeGetItem":
 			case "CatchFruit":
 			case "Cooking":
+			//case "Match":
 				game = new Phaser.Game(playGameConfig)
 				break
 			default:
@@ -121,6 +123,7 @@ export default function startGame(gameId,gameModifyDatas,type){
 			case "PokeGetItem":
 			case "CatchFruit":
 			case "Cooking":
+			//case "Match":
 				game = new Phaser.Game(modifyGameConfig)
 				break
 			default:
@@ -148,6 +151,9 @@ export default function startGame(gameId,gameModifyDatas,type){
 		case "Pinball":
 			game.scene.add(gameId, new PinballGameScene())
 			break
+		// case "Match":
+		// 	game.scene.add(gameId, new MatchGameScene())
+		// 	break
 		default:
 			console.log("error!");
 	}
